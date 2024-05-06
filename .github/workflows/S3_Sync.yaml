@@ -47,7 +47,7 @@ jobs:
         id: zipfile
         run: |
           repo_name=$(echo "${{ inputs.repository }}" | cut -d '/' -f 2)
-          echo "$repo_name=$repo_name" >> $GITHUB_OUTPUT
+          echo "repo_name=$repo_name" >> $GITHUB_OUTPUT
           echo $repo_name
 
           echo "Displaying the contents"
