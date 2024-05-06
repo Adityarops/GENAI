@@ -50,6 +50,13 @@ jobs:
           echo "$repo_name=$repo_name" >> $GITHUB_OUTPUT
           echo $repo_name
 
+          echo "Displaying the contents"
+          ls -lart
+          find . -print0 | xargs -0 ls -lh 
+
+          echo "Displaying the size"
+          du -sh
+
           # Create a temporary directory if it does not exist
           if [ ! -d "temp" ]; then
           mkdir temp
